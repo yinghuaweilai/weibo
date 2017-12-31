@@ -9,21 +9,30 @@
 <link
 	href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css"
 	rel="stylesheet">
-<title>老板你乱写的所有文章</title>
+<title>我的微博</title>
 </head>
-<body>
-	
+<body background="./img/bark.jpg" width="100%" height="100%">
+	<div class="text-center">
 	<img alt="头像" src="./uploads/${currentUser.filename}"/>
-	<a href="./add.jsp">本老板还要乱写文章</a>
+	<c:if test="${currentUser.username==11}">
+	<a href="./add.jsp"><h1>添加微博</h1></a>
+	</c:if>
+	<c:if test="${currentUser.username!=11}">
+	<a href="./login.jsp">登录</a>
+	</c:if>
 	<h1>瞎乱写文章列表</h1>
 	<ul>
+	<hr />
 		<c:forEach var="t" items="${articles}">
 			<li>
 				<h3>${t.title}</h3>
 				<p>${t.content}</p>
 				<p>
 					发表日期：<span>${t.publishDate}</span>
-				</p> <a href="./del.do?id=${t.id}">删除</a>
+				<c:if test="${currentUser.username==11}">
+					</p> <a href="./del.do?id=${t.id}">删除</a>
+				</c:if>
+				<hr />
 			</li>
 		</c:forEach>
 	</ul>
@@ -89,6 +98,6 @@
 		</ul>
 	</div>
 
-	
+	</div>
 </body>
 </html>

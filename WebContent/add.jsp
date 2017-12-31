@@ -4,9 +4,13 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link
+	href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css"
+	rel="stylesheet">
 <title>添加文章</title>
 </head>
-<body>
+<body background="./img/bark.jpg" width="100%" height="100%">
+<div class="text-center">
 	<form action="./add.do" method="post">
 		<img alt="头像" src="./uploads/${currentUser.filename}"/>
 		<h2>奋笔疾书新文章</h2>
@@ -14,5 +18,6 @@
 		内容：<textarea rows="1" name="content"></textarea>
 		<input type="submit" value="提交"/>
 	</form>
+</div>
 </body>
 </html>

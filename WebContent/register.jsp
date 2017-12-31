@@ -8,7 +8,7 @@
 <link href="./css/main.css" rel="stylesheet">
 <title>用户注册</title>
 </head>
-<body>
+<body background="./img/bark.jpg" width="100%" height="100%">
 	<div class="container">
 		<div class="panel panel-default col-md-offset-3 col-md-6 register-panel">
 			<div class="h2 text-center">用户注册</div>
