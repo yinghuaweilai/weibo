@@ -9,11 +9,12 @@
 <link
 	href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css"
 	rel="stylesheet">
-<title>老板你瞎乱写的所有文章在这里</title>
+<title>老板你乱写的所有文章</title>
 </head>
 <body>
+	
 	<img alt="头像" src="./uploads/${currentUser.filename}"/>
-	<a href="./add.jsp">本老板还要瞎乱写文章</a>
+	<a href="./add.jsp">本老板还要乱写文章</a>
 	<h1>瞎乱写文章列表</h1>
 	<ul>
 		<c:forEach var="t" items="${articles}">
@@ -63,6 +64,7 @@
 					<a href="./list.do?page=${total}">${total}</a>
 				</li>	
 			</c:if>
+	
 			<c:if test="${total-current <= 4}">
 							<li><a href="./list.do?page=1">1</a></li>
 			
@@ -87,5 +89,6 @@
 		</ul>
 	</div>
 
+	
 </body>
 </html>

@@ -53,7 +53,7 @@ public class ListArticlesServlet extends HttpServlet {
 			request.setAttribute("articles", articles);
 			request.setAttribute("current", current);
 			request.setAttribute("total", total/Global.PAGE_SIZE);
-			request.getRequestDispatcher("./list.jsp").forward(request, response);
+			request.getRequestDispatcher("./admin/list.jsp").forward(request, response);
 		} else if(type.equals("json")) {
 			response.setContentType("application/json; charset=utf8");
 			JsonArrayBuilder builder = Json.createArrayBuilder();
