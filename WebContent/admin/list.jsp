@@ -16,6 +16,7 @@
 	<img alt="头像" src="./uploads/${currentUser.filename}"/>
 	<c:if test="${currentUser.username==11}">
 	<a href="./add.jsp"><h1>添加微博</h1></a>
+	<a href="./dashboard.jsp"><h1>回到主页</h1></a>
 	</c:if>
 	<c:if test="${currentUser.username!=11}">
 	<a href="./login.jsp">登录</a>

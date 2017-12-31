@@ -11,7 +11,7 @@
 <body background="./img/bark.jpg" width="100%" height="100%">
 	<div class="container">
 		<div class="panel panel-default col-md-offset-3 col-md-6 register-panel">
-			<div class="h2 text-center">用户注册</div>
+			<div class="h2 text-center">注册</div>
 			<div class="pannel-body">
 				<form class="form-horizontal" action="./uploadMulti.do" method="post"
 					enctype="multipart/form-data">

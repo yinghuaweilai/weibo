@@ -7,12 +7,15 @@
 <link
 	href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css"
 	rel="stylesheet">
+<title>我的微博主页</title>
 </head>
 <body background="./img/bark.jpg" width="100%" height="100%">
 <div class="text-center">
 	<h1>您好，${currentUser.username}</h1>
 	<img alt="头像" src="./uploads/${currentUser.filename}"/>
-	<a href="./add.jsp"><h2>添加文章</h2></a>
+	<a href="./add.jsp"><h1>添加文章</h1></a>
+	<a href="./list.do"><h1>管理微博</h1></a>
+	<a href="./Logout"><h1>登出</h1></a>
 </div>
 </body>
 </html>

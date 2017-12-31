@@ -18,6 +18,8 @@
 		内容：<textarea rows="1" name="content"></textarea>
 		<input type="submit" value="提交"/>
 	</form>
+	<a href="./dashboard.jsp"><h2>回到我的微博主页</h2></a>
+	<a href="./list.do"><h2>回到我的微博管理</h2></a>
 </div>
 </body>
 </html>

@@ -13,6 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import org.apache.commons.dbutils.QueryRunner;
 
 import cn.jhc.Global;
+import cn.jhc.bean.User;
 import cn.jhc.db.ArticleDao;
 
 /**
@@ -27,6 +28,11 @@ public class DelServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		User user = (User) request.getSession().getAttribute("currentUser");
+		if(user==null) {
+			request.setAttribute("err", "µÇÂ¼ºó²Ù×÷");
+			request.getRequestDispatcher("./login.jsp").forward(request, response);
+		}
 		String sid = request.getParameter("id");
 		int id = Integer.valueOf(sid).intValue();
 		String ajax = request.getParameter("ajax");
