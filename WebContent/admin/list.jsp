@@ -17,9 +17,11 @@
 	<c:if test="${currentUser.username==11}">
 	<a href="./add.jsp"><h1>添加微博</h1></a>
 	<a href="./dashboard.jsp"><h1>回到主页</h1></a>
+	<a href="./Logout"><h1>登出</h1></a>
 	</c:if>
 	<c:if test="${currentUser.username!=11}">
-	<a href="./login.jsp">登录</a>
+	<h1>老板你还没登录，请登录</h1>
+	<a href="./login.jsp"><h2>登录</h2></a>
 	</c:if>
 	<h1>瞎乱写文章列表</h1>
 	<ul>
@@ -31,7 +33,8 @@
 				<p>
 					发表日期：<span>${t.publishDate}</span>
 				<c:if test="${currentUser.username==11}">
-					</p> <a href="./del.do?id=${t.id}">删除</a>
+				</p> 
+					<a href="./del.do?id=${t.id}">删除</a>
 				</c:if>
 				<hr />
 			</li>
@@ -90,7 +93,7 @@
 				<a href="./list.do?page=${current}"><span aria-hidden="true">&raquo;</span></a>
 			</li>
 			</c:if>
-			<c:if test="${current>=1 && current<total}">
+			<c:if test="${current>0 && current<total}">
 			<li class="abled">
 				<a href="./list.do?page=${current+1}"><span aria-hidden="true">&raquo;</span></a>
 			</li>
